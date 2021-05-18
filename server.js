@@ -9,6 +9,6 @@ app.get("/*",
     (req, res) => {
         res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
 });
-// takes incoming requests and responds with the index.html
+// takes incoming root requests and responds with the index.html
 
 app.listen(process.env.PORT || 3000, () => console.log("Server Running..."));
