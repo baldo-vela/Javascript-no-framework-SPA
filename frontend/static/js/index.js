@@ -10,4 +10,13 @@ const router = async () => {
         { path: "/settings",view: () => console.log("Viewing Settings")     },
 
     ];
+
+    // Okay here we test each route for potential match
+    const potentialMatches = routes.map(route =>{
+        return {
+            route: route,
+            isMatch: location.pathname === route.path
+
+        };
+    });
 };
