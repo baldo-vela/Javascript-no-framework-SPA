@@ -19,4 +19,13 @@ const router = async () => {
 
         };
     });
+
+    let match = potentialMatches.find(potentialMatch => potentialMatch.isMatch);
+
+    console.log(match);
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Document Loaded");
+    router();
+})

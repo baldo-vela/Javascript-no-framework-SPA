@@ -1,32 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="=UTF-8">
-        <meta name="viewport" content="witdh-device-width, initial-scale=1.0">
-        <title>Single Page App</title>
-
-        <script defer src="/theme.js"></script>
-        <link rel="stylesheet" href="/style.css" />
-        <link
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
-          rel="stylesheet"
-        />
-    </head>
-    <body>
-        <nav class = "navbar">
-            <ul class="navbar-nav">
-                <li class="logo">
-                    <a href="/" class="nav__link" data-link>Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/posts" class="nav__link" data-link>Posts</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/settings" class="nav__link" data-link>Settings</a>
-                </li>
-            </ul>
-        </nav>
-        <script type="module" src="/static/js/index.js"></script>
-        <!-- Rails loading scripts will go here, see Laura's vids/repo -->
-    </body>
+<html lang="en">  
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="theme.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <nav class = "navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="/" class="nav__link" data-link>Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a href="/posts" class="nav__link" data-link>Posts</a>
+            </li>
+            <li class="nav-item">
+                <a href="/settings" class="nav__link" data-link>Settings</a>
+            </li>
+        </ul>
+    </nav>
+    <script type="module" src="/static/js/index.js"></script>
+    <!-- Rails loading scripts will go here, see Laura's vids/repo -->
+</body>
 </html>
