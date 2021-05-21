@@ -13,10 +13,18 @@
         />
     </head>
     <body>
-        <nav class = "nav">
-            <a href="/" class="nav__link" data-link>Dashboard</a>
-            <a href="/posts" class="nav__link" data-link>Posts</a>
-            <a href="/settings" class="nav__link" data-link>Settings</a>
+        <nav class = "navbar">
+            <ul class="navbar-nav">
+                <li class="logo">
+                    <a href="/" class="nav__link" data-link>Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/posts" class="nav__link" data-link>Posts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/settings" class="nav__link" data-link>Settings</a>
+                </li>
+            </ul>
         </nav>
         <script type="module" src="/static/js/index.js"></script>
         <!-- Rails loading scripts will go here, see Laura's vids/repo -->
