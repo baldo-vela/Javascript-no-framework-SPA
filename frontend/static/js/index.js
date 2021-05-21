@@ -5,7 +5,7 @@ const router = async () => {
         // Root
         { path: "/",        view: () => console.log("Viewing Dashboard")    },
         // Posts
-        { path: "/posts",   view: () => console.log("Viewing Posts")        },
+        { path: "/characters",   view: () => console.log("Viewing Characters")        },
         // Settings
         { path: "/settings",view: () => console.log("Viewing Settings")     },
 
