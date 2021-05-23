@@ -1,4 +1,6 @@
 console.log("Index.JS Loaded!")
+//slight bit of sanitization on incoming path requests
+const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
 const router = async () => {
     const routes = [
@@ -30,6 +32,9 @@ const router = async () => {
             isMatch: true
         };
     }
+
+    //Output the result, refactor later with a class
+    console.log(match.route.view());
 };
 
 document.addEventListener("DOMContentLoaded", () => {
