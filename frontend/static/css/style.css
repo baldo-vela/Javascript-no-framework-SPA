@@ -1,5 +1,6 @@
 :root {
     font-size: 16px;
+    font-family: 'Share Tech Mono', monospace;
     font-family: 'Open Sans';
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
@@ -16,7 +17,7 @@
   }
   
   body::-webkit-scrollbar {
-    width: 0.25rem;
+    width: 0.6rem;
   }
   
   body::-webkit-scrollbar-track {
