@@ -42,9 +42,8 @@ const router = async () => {
     }
     //Creates a new instance of the view at the matched route
     const view = new match.route.view();
-
-    //Output the result, refactor later with a class
-    console.log(match.route.view());
+    //Takes the view instance, and injects the returned HTML into the div tagged "app"
+    document.querySelector("#app").innerHTML = await view.getHtml();
 };
 
 window.addEventListener("popstate", router);
