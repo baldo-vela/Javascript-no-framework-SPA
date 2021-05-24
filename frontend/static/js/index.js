@@ -2,6 +2,12 @@ console.log("Index.JS Loaded!")
 //slight bit of sanitization on incoming path requests
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
+//Uses the 'history' API to enable user navigation to previously acccesed resources without regen.
+const navigateTo = url => {
+    history.pushState(null, null, url);
+    router();
+};
+
 const router = async () => {
     const routes = [
         // Root
@@ -39,5 +45,14 @@ const router = async () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Document Loaded");
+
+    //Listens for interaction with 'data-link' tagged hrefs to override default behavior, and pass it to the specified target, but without a page refresh
+    document.body.addEventListener("click", e => {
+        if (e.target.matches("[data-link]")) {
+            e.preventDefault();
+            navigateTo(e.target.href);
+        }
+    });
+
     router();
 })
