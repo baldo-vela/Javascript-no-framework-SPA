@@ -13,11 +13,11 @@ const navigateTo = url => {
 const router = async () => {
     const routes = [
         // Root
-        { path: "/",            view: Dashboard => console.log("Viewing Dashboard")    },
+        { path: "/",            view: Dashboard },
         // Characters
-        { path: "/characters",  view: () => console.log("Viewing Characters")   },
+        //{ path: "/characters",  view: () => console.log("Viewing Characters")   },
         // Settings
-        { path: "/settings",    view: () => console.log("Viewing Settings")     },
+        //{ path: "/settings",    view: () => console.log("Viewing Settings")     },
 
     ];
 
