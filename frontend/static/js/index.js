@@ -11,11 +11,11 @@ const navigateTo = url => {
 const router = async () => {
     const routes = [
         // Root
-        { path: "/",        view: () => console.log("Viewing Dashboard")    },
+        { path: "/",            view: () => console.log("Viewing Dashboard")    },
         // Characters
-        { path: "/characters",   view: () => console.log("Viewing Characters")        },
+        { path: "/characters",  view: () => console.log("Viewing Characters")   },
         // Settings
-        { path: "/settings",view: () => console.log("Viewing Settings")     },
+        { path: "/settings",    view: () => console.log("Viewing Settings")     },
 
     ];
 
@@ -35,7 +35,7 @@ const router = async () => {
     if (!match) {
         match = {
             route: routes[0], 
-            isMatch: true
+            result: [location.pathname]
         };
     }
 
