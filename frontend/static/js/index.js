@@ -40,6 +40,8 @@ const router = async () => {
             result: [location.pathname]
         };
     }
+    //Creates a new instance of the view at the matched route
+    const view = new match.route.view();
 
     //Output the result, refactor later with a class
     console.log(match.route.view());
