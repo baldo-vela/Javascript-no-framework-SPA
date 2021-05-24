@@ -24,7 +24,7 @@ const router = async () => {
         return {
             route: route,
             result: location.pathname.match(pathToRegex(route.path))
-            //uses pathToRegex to interpret the browser request, to compare versus the paths in router
+            //uses #pathToRegex to interpret the browser request, to compare versus the paths in router
         };
     });
 
