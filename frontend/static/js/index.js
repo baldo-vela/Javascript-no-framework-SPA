@@ -1,6 +1,9 @@
 console.log("Index.JS Loaded!")
 
+import Characters from "./views/Characters.js";
+import CharacterView from "./views/CharacterView.js";
 import Dashboard from "./views/Dashboard.js";
+import Settings from "./views/Settings.js";
 //slight bit of sanitization on incoming path requests
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
@@ -15,9 +18,11 @@ const router = async () => {
         // Root
         { path: "/",            view: Dashboard },
         // Characters
-        //{ path: "/characters",  view: () => console.log("Viewing Characters")   },
+        { path: "/characters",   view: Characters },
+        //OH snap we need a specific character view route
+        { path: "/characters/:id", view: CharacterView  },
         // Settings
-        //{ path: "/settings",    view: () => console.log("Viewing Settings")     },
+        { path: "/settings",    view: Settings   },
 
     ];
 
