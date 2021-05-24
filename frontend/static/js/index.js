@@ -1,4 +1,6 @@
 console.log("Index.JS Loaded!")
+
+import Dashboard from "./views/Dashboard.js";
 //slight bit of sanitization on incoming path requests
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
@@ -11,7 +13,7 @@ const navigateTo = url => {
 const router = async () => {
     const routes = [
         // Root
-        { path: "/",            view: () => console.log("Viewing Dashboard")    },
+        { path: "/",            view: Dashboard => console.log("Viewing Dashboard")    },
         // Characters
         { path: "/characters",  view: () => console.log("Viewing Characters")   },
         // Settings
