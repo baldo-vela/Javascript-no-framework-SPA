@@ -28,7 +28,7 @@ const router = async () => {
         };
     });
 
-    let match = potentialMatches.find(potentialMatch => potentialMatch.isMatch);
+    let match = potentialMatches.find(potentialMatch => potentialMatch.result !== null);
     //Console ouput the match for debugging
     console.log(match);
     //Route Defaulting
