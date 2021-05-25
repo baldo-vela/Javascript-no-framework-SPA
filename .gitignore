@@ -5,34 +5,48 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
+/backend/raid_key/.bundle
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+/backend/raid_key/log/*
+/backend/raid_key/tmp/*
+!/backend/raid_key/log/.keep
+!/backend/raid_key/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+/backend/raid_key/tmp/pids/*
+!/backend/raid_key/tmp/pids/
+!/backend/raid_key/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-/storage/*
-!/storage/.keep
+/backend/raid_key/storage/*
+!/backend/raid_key/storage/.keep
 
-/public/assets
-.byebug_history
+/backend/raid_key/public/assets
+/backend/raid_key/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+/backend/raid_key/config/master.key
 
-/public/packs
-/public/packs-test
-/node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
+/backend/raid_key/public/packs
+/backend/raid_key/public/packs-test
+/backend/raid_key/node_modules
+/backend/raid_key/yarn-error.log
+/backend/raid_key/yarn-debug.log*
+/backend/raid_key/.yarn-integrity
 
-.env
+/backend/raid_key/.env
+
+# Manually added following gitignore template for ails to adjust for bifurcated repo directory structure
+backend/raid_key/*.rbc
+capybara-*.html
+backend/raid_key/.rspec
+backend/raid_key/db/*.sqlite3
+backend/raid_key/db/*.sqlite3-journal
+backend/raid_key/db/*.sqlite3-[0-9]*
+backend/raid_key/public/system
+backend/raid_key/coverage/
+backend/raid_key/spec/tmp
+backend/raid_key*.orig
+backend/raid_key/rerun.txt
+backend/raid_key/pickle-email-*.html
