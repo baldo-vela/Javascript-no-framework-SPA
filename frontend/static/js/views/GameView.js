@@ -4,7 +4,7 @@ export default class extends AbstractView {
     constructor() {
         super();
         this.gameId = params.id;
-        this.setTitle("Viewing Post");
+        this.setTitle("Viewing Game");
     }
 
     async getHtml() {

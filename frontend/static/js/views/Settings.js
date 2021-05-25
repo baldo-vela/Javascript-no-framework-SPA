@@ -4,7 +4,7 @@ export default class extends AbstractView {
     constructor() {
         // Need the super constructor to override the parent class
         super();
-        this.setTitle("Dashboard");
+        this.setTitle("Settings");
     }
 
     async getHtml() {
