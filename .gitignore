@@ -38,15 +38,20 @@
 /backend/raid_key/.env
 
 # Manually added following gitignore template for ails to adjust for bifurcated repo directory structure
-backend/raid_key/*.rbc
+/backend/raid_key/*.rbc
 capybara-*.html
-backend/raid_key/.rspec
-backend/raid_key/db/*.sqlite3
-backend/raid_key/db/*.sqlite3-journal
-backend/raid_key/db/*.sqlite3-[0-9]*
-backend/raid_key/public/system
-backend/raid_key/coverage/
-backend/raid_key/spec/tmp
-backend/raid_key*.orig
-backend/raid_key/rerun.txt
-backend/raid_key/pickle-email-*.html
+/backend/raid_key/.rspec
+/backend/raid_key/db/*.sqlite3
+/backend/raid_key/db/*.sqlite3-journal
+/backend/raid_key/db/*.sqlite3-[0-9]*
+/backend/raid_key/public/system
+/backend/raid_key/coverage/
+/backend/raid_key/spec/tmp/cache/*
+/backend/raid_key/tmp/cache/*
+/backend/raid_key/tmp/*
+/backend/raid_key*.orig
+/backend/raid_key/rerun.txt
+/backend/raid_key/pickle-email-*.html
+backend/raid_key/tmp/cache/bootsnap/load-path-cache
+backend/raid_key/Gemfile.lock
+backend/raid_key/tmp/cache/bootsnap/*
