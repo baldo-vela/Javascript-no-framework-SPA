@@ -2,14 +2,15 @@ import AbstractView from "./AbstractView.js";
 
 export default class extends AbstractView {
     constructor() {
-        // Need the super constructor to override the parent class
         super();
-        this.setTitle("Dashboard");
+        this.gameId = params.id;
+        this.setTitle("Viewing Post");
     }
 
     async getHtml() {
         return `
-            <h1>Scope out your characters</h1>
+            <h1>Post</h1>
+            <p>You are viewing post #${this.GameId}.</p>
         `;
     }
 }
