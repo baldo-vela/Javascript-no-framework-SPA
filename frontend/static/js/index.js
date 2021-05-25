@@ -1,7 +1,7 @@
 console.log("Index.JS Loaded!")
 
-import Characters from "./views/Characters.js";
-import CharacterView from "./views/CharacterView.js";
+import Characters from "./views/Games.js";
+import CharacterView from "./views/GameView.js";
 import Dashboard from "./views/Dashboard.js";
 import Settings from "./views/Settings.js";
 //slight bit of sanitization on incoming path requests
