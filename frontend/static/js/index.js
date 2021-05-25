@@ -1,7 +1,7 @@
 console.log("Index.JS Loaded!")
 
-import Characters from "./views/Games.js";
-import CharacterView from "./views/GameView.js";
+import Games from "./views/Games.js";
+import GameView from "./views/GameView.js";
 import Dashboard from "./views/Dashboard.js";
 import Settings from "./views/Settings.js";
 //slight bit of sanitization on incoming path requests
@@ -17,12 +17,12 @@ const router = async () => {
     const routes = [
         // Root
         { path: "/",            view: Dashboard },
-        // Characters
-        { path: "/characters",   view: Characters },
-        //OH snap we need a specific character view route
-        { path: "/characters/:id", view: CharacterView  },
+        // Ideally View all Games
+        { path: "/games",       view: Games     },
+        //OH snap we need a specific game view route
+        { path: "/gamess/:id",  view: GameView  },
         // Settings
-        { path: "/settings",    view: Settings   },
+        { path: "/settings",    view: Settings  },
 
     ];
 
