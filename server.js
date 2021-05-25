@@ -1,3 +1,4 @@
+//Used Node Server for rapid prototyping, while dealing with rolling-back Rails to 6.0.x
 const express = require("express")
 const path = require("path")
 
