@@ -47,7 +47,7 @@ export default class extends AbstractView {
         Proin gravida hendrerit nulla et ultricies. Praesent malesuada quis augue ut auctor. Duis tempus condimentum ornare. Curabitur tincidunt risus quam, in varius lorem faucibus quis. Nunc sollicitudin ante nibh, vitae sagittis nunc aliquam quis. Duis et consequat dui. Suspendisse vel nisi ultricies, sollicitudin nulla in, consectetur felis. Etiam elementum sapien urna, ut sagittis metus laoreet vulputate. Vivamus risus dolor, ultrices et augue non, tempus dapibus neque. Fusce sollicitudin velit nec ex interdum, vel rhoncus erat sagittis.
         </p></div>
         <p>
-            <a href="/characters" data-link>View Recent Posts.</a>
+            <a href="/games" data-link>View Recent Posts.</a>
         </p>
         `;
     }
