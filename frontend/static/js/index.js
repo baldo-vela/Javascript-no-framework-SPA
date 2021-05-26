@@ -16,7 +16,6 @@ const navigateTo = url => {
 
 
 const router = async () => {
-    console.log(pathToRegex("/posts/:id"));
     const routes = [
         // Root
         { path: "/",            view: Dashboard },
