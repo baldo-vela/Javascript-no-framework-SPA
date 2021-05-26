@@ -16,6 +16,8 @@ const navigateTo = url => {
 const getParams = match => {
     //grabs the keys and values for the incoming path
     const values = match.result.slice(1);
+    //#matchAll is an itterator, so we chew through the path, and build an array that we can pull the first value from to specify the ID of our page object
+    const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map(result => result[1]);
 };
 
 const router = async () => {
