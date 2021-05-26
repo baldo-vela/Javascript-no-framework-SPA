@@ -1,9 +1,9 @@
 import AbstractView from "./AbstractView.js";
 
 export default class extends AbstractView {
-    constructor() {
+    constructor(params) {
         // Need the super constructor to override the parent class
-        super();
+        super(params);
         this.setTitle("Settings");
     }
 

@@ -1,8 +1,8 @@
 import AbstractView from "./AbstractView.js";
 //
 export default class extends AbstractView {
-    constructor() {
-        super();
+    constructor(params) {
+        super(params);
         this.gameId = params.id;
         this.setTitle("Viewing Game");
     }
