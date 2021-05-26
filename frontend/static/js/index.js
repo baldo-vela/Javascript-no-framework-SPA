@@ -18,6 +18,10 @@ const getParams = match => {
     const values = match.result.slice(1);
     //#matchAll is an itterator, so we chew through the path, and build an array that we can pull the first value from to specify the ID of our page object
     const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map(result => result[1]);
+
+    return Object.fromEntries(keys.map((key, i) => {
+        return [key, values[i]];
+    }));
 };
 
 const router = async () => {
@@ -43,7 +47,7 @@ const router = async () => {
     });
 
     let match = potentialMatches.find(potentialMatch => potentialMatch.result !== null);
-    
+
     //Route Defaulting
     if (!match) {
         match = {
