@@ -4,7 +4,7 @@ import Games from "./views/Games.js";
 import GameView from "./views/GameView.js";
 import Dashboard from "./views/Dashboard.js";
 import Settings from "./views/Settings.js";
-//slight bit of sanitization on incoming path requests
+//slight bit of RegEx processing and sanitization on incoming path requests, pushes incoming ID to a capture object [/object/id][id]
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
 //Uses the 'history' API to enable user navigation to previously acccesed resources without regen.
@@ -13,7 +13,10 @@ const navigateTo = url => {
     router();
 };
 
+
+
 const router = async () => {
+    console.log(pathToRegex("/posts/:id"));
     const routes = [
         // Root
         { path: "/",            view: Dashboard },
