@@ -13,7 +13,10 @@ const navigateTo = url => {
     router();
 };
 
-
+const getParams = match => {
+    //grabs the keys and values for the incoming path
+    const values = match.result.slice(1);
+};
 
 const router = async () => {
     const routes = [
@@ -48,7 +51,7 @@ const router = async () => {
         };
     }
     //Creates a new instance of the view at the matched route
-    const view = new match.route.view();
+    const view = new match.route.view(getParams(match));
     //Takes the view instance, and injects the returned HTML into the div tagged "app"
     document.querySelector("#app").innerHTML = await view.getHtml();
 };
