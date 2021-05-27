@@ -52,8 +52,8 @@ capybara-*.html
 /backend/raid_key*.orig
 /backend/raid_key/rerun.txt
 /backend/raid_key/pickle-email-*.html
-backend/raid_key/tmp/cache/bootsnap/load-path-cache
-backend/raid_key/Gemfile.lock
-backend/raid_key/tmp/cache/bootsnap/**
-backend/raid_key/tmp/cache/bootsnap/compile-cache/**
-backend/raid_key/tmp/cache/bootsnap/load-path-cache/**
+/backend/raid_key/tmp/cache/bootsnap/load-path-cache
+/backend/raid_key/Gemfile.lock
+/backend/raid_key/tmp/cache/bootsnap/**
+/backend/raid_key/tmp/cache/bootsnap/compile-cache/**
+/backend/raid_key/tmp/cache/bootsnap/load-path-cache/**
