@@ -8,8 +8,8 @@
 /backend/raid_key/.bundle
 
 # Ignore all logfiles and tempfiles.
-/backend/raid_key/log/*
-/backend/raid_key/tmp/*
+/backend/raid_key/log/**
+/backend/raid_key/tmp/**
 !/backend/raid_key/log/.keep
 !/backend/raid_key/tmp/.keep
 
@@ -46,12 +46,14 @@ capybara-*.html
 /backend/raid_key/db/*.sqlite3-[0-9]*
 /backend/raid_key/public/system
 /backend/raid_key/coverage/
-/backend/raid_key/spec/tmp/cache/*
+/backend/raid_key/spec/tmp/cache/**
 /backend/raid_key/tmp/cache/*
-/backend/raid_key/tmp/*
+/backend/raid_key/tmp/**
 /backend/raid_key*.orig
 /backend/raid_key/rerun.txt
 /backend/raid_key/pickle-email-*.html
 backend/raid_key/tmp/cache/bootsnap/load-path-cache
 backend/raid_key/Gemfile.lock
-backend/raid_key/tmp/cache/bootsnap/*
+backend/raid_key/tmp/cache/bootsnap/**
+backend/raid_key/tmp/cache/bootsnap/compile-cache/52/41c65cb918fa67
+backend/raid_key/tmp/cache/bootsnap/load-path-cache/*
