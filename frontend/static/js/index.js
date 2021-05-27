@@ -1,7 +1,7 @@
 console.log("Index.JS Loaded!")
 
-import Games from "./views/Games.js";
-import GameView from "./views/GameView.js";
+import Campaigns from "./views/Campaigns.js";
+import CampaignView from "./views/CampaignView.js";
 import Dashboard from "./views/Dashboard.js";
 import Settings from "./views/Settings.js";
 //slight bit of RegEx processing and sanitization on incoming path requests, pushes incoming ID to a capture object [/object/id][id]
@@ -28,10 +28,10 @@ const router = async () => {
     const routes = [
         // Root
         { path: "/",            view: Dashboard },
-        // Ideally View all Games
-        { path: "/games",       view: Games     },
-        //OH snap we need a specific game view route
-        { path: "/gamess/:id",  view: GameView  },
+        // Ideally View all Campaigns
+        { path: "/campaigns",       view: Campaigns     },
+        //OH snap we need a specific campaign view route
+        { path: "/campaignss/:id",  view: CampaignView  },
         // Settings
         { path: "/settings",    view: Settings  },
 

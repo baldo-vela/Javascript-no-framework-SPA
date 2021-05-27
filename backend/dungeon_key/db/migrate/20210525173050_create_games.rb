@@ -1,6 +1,6 @@
-class CreateGames < ActiveRecord::Migration[6.0]
+class CreateCampaigns < ActiveRecord::Migration[6.0]
   def change
-    create_table :games do |t|
+    create_table :campaigns do |t|
       t.string :name,
       t.string :system,
       t.string :event,

@@ -1,51 +1,51 @@
-class GamesController < ApplicationController
-  before_action :set_game, only: [:show, :update, :destroy]
+class CampaignsController < ApplicationController
+  before_action :set_campaign, only: [:show, :update, :destroy]
 
-  # GET /games
+  # GET /campaigns
   def index
-    @games = Game.all
+    @campaigns = Campaign.all
 
-    render json: @games
+    render json: @campaigns
   end
 
-  # GET /games/1
+  # GET /campaigns/1
   def show
-    render json: @game
+    render json: @campaign
   end
 
-  # POST /games
+  # POST /campaigns
   def create
-    @game = Game.new(game_params)
+    @campaign = Campaign.new(campaign_params)
 
-    if @game.save
-      render json: @game, status: :created, location: @game
+    if @campaign.save
+      render json: @campaign, status: :created, location: @campaign
     else
-      render json: @game.errors, status: :unprocessable_entity
+      render json: @campaign.errors, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /games/1
+  # PATCH/PUT /campaigns/1
   def update
-    if @game.update(game_params)
-      render json: @game
+    if @campaign.update(campaign_params)
+      render json: @campaign
     else
-      render json: @game.errors, status: :unprocessable_entity
+      render json: @campaign.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE /games/1
+  # DELETE /campaigns/1
   def destroy
-    @game.destroy
+    @campaign.destroy
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_game
-      @game = Game.find(params[:id])
+    def set_campaign
+      @campaign = Campaign.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
-    def game_params
-      params.require(:game).permit(:name,, :system,, :event,, :time)
+    def campaign_params
+      params.require(:campaign).permit(:name,, :system,, :event,, :time)
     end
 end

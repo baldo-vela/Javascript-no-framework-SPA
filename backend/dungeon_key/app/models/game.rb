@@ -1,2 +1,2 @@
-class Game < ApplicationRecord
+class Campaign < ApplicationRecord
 end
