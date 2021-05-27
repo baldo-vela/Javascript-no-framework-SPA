@@ -5,57 +5,57 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/backend/raid_key/.bundle
+/backend/dungeon_key/.bundle
 
 # Ignore all logfiles and tempfiles.
-/backend/raid_key/log/**
-/backend/raid_key/tmp/**
-!/backend/raid_key/log/.keep
-!/backend/raid_key/tmp/.keep
+/backend/dungeon_key/log/**
+/backend/dungeon_key/tmp/**
+!/backend/dungeon_key/log/.keep
+!/backend/dungeon_key/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/backend/raid_key/tmp/pids/*
-!/backend/raid_key/tmp/pids/
-!/backend/raid_key/tmp/pids/.keep
+/backend/dungeon_key/tmp/pids/*
+!/backend/dungeon_key/tmp/pids/
+!/backend/dungeon_key/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-/backend/raid_key/storage/*
-!/backend/raid_key/storage/.keep
+/backend/dungeon_key/storage/*
+!/backend/dungeon_key/storage/.keep
 
-/backend/raid_key/public/assets
-/backend/raid_key/.byebug_history
+/backend/dungeon_key/public/assets
+/backend/dungeon_key/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/backend/raid_key/config/master.key
+/backend/dungeon_key/config/master.key
 
-/backend/raid_key/public/packs
-/backend/raid_key/public/packs-test
-/backend/raid_key/node_modules
-/backend/raid_key/yarn-error.log
-/backend/raid_key/yarn-debug.log*
-/backend/raid_key/.yarn-integrity
+/backend/dungeon_key/public/packs
+/backend/dungeon_key/public/packs-test
+/backend/dungeon_key/node_modules
+/backend/dungeon_key/yarn-error.log
+/backend/dungeon_key/yarn-debug.log*
+/backend/dungeon_key/.yarn-integrity
 
-/backend/raid_key/.env
+/backend/dungeon_key/.env
 
 # Manually added following gitignore template for ails to adjust for bifurcated repo directory structure
-/backend/raid_key/*.rbc
+/backend/dungeon_key/*.rbc
 capybara-*.html
-/backend/raid_key/.rspec
-/backend/raid_key/db/*.sqlite3
-/backend/raid_key/db/*.sqlite3-journal
-/backend/raid_key/db/*.sqlite3-[0-9]*
-/backend/raid_key/public/system
-/backend/raid_key/coverage/
-/backend/raid_key/spec/tmp/cache/**
-/backend/raid_key/tmp/cache/*
-/backend/raid_key/tmp/**
-/backend/raid_key*.orig
-/backend/raid_key/rerun.txt
-/backend/raid_key/pickle-email-*.html
-/backend/raid_key/tmp/cache/bootsnap/load-path-cache
-/backend/raid_key/Gemfile.lock
-/backend/raid_key/tmp/cache/bootsnap/**
-/backend/raid_key/tmp/cache/bootsnap/compile-cache/**
-/backend/raid_key/tmp/cache/bootsnap/load-path-cache/**
-backend/raid_key/tmp/cache/bootsnap/load-path-cache/*
-backend/raid_key/tmp/cache/bootsnap/compile-cache/52/41c65cb918fa67
+/backend/dungeon_key/.rspec
+/backend/dungeon_key/db/*.sqlite3
+/backend/dungeon_key/db/*.sqlite3-journal
+/backend/dungeon_key/db/*.sqlite3-[0-9]*
+/backend/dungeon_key/public/system
+/backend/dungeon_key/coverage/
+/backend/dungeon_key/spec/tmp/cache/**
+/backend/dungeon_key/tmp/cache/*
+/backend/dungeon_key/tmp/**
+/backend/dungeon_key*.orig
+/backend/dungeon_key/rerun.txt
+/backend/dungeon_key/pickle-email-*.html
+/backend/dungeon_key/tmp/cache/bootsnap/load-path-cache
+/backend/dungeon_key/Gemfile.lock
+/backend/dungeon_key/tmp/cache/bootsnap/**
+/backend/dungeon_key/tmp/cache/bootsnap/compile-cache/**
+/backend/dungeon_key/tmp/cache/bootsnap/load-path-cache/**
+backend/dungeon_key/tmp/cache/bootsnap/load-path-cache/*
+backend/dungeon_key/tmp/cache/bootsnap/compile-cache/52/41c65cb918fa67
