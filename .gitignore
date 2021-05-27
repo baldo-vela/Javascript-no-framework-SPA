@@ -57,5 +57,5 @@ capybara-*.html
 /backend/raid_key/tmp/cache/bootsnap/**
 /backend/raid_key/tmp/cache/bootsnap/compile-cache/**
 /backend/raid_key/tmp/cache/bootsnap/load-path-cache/**
-backend/raid_key/tmp/cache/bootsnap/load-path-cache
+backend/raid_key/tmp/cache/bootsnap/load-path-cache/*
 backend/raid_key/tmp/cache/bootsnap/compile-cache/52/41c65cb918fa67
