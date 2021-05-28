@@ -4,5 +4,16 @@ class campaignAdapter {
         this.rootStoreURL = `${rootURL}/api/v1/campaigns`
     }
 
+    getCampaigns(){
+        fetch(this.rootStoreURL)
+        .then(res => res.json()
+        .then(campaigns =>{
+            campaigns.forEach(campaign => {
+                const temp = new Campaign(campaign)
+                console.log(temp)
+            })
+        }))
+    //Error catching goes here
+    }
 
 }
