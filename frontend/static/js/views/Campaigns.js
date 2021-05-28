@@ -11,6 +11,7 @@ export default class Campaign extends AbstractView {
         super(params);
         this.setTitle("Campaigns");
         this.id = params.id
+        this.name = params.name
 
     }
 
@@ -20,11 +21,16 @@ export default class Campaign extends AbstractView {
             <ul id="campaigns-container"></ul> 
         `;
     }
+    render(){
+        return(
+            `<li id="campaign-${this.id}" data-link=${this.id}>`
+        )
+    }
 
     addToDom(){
         const campaignsContainer = document.getElementById("campaigns-container");
         console.log(this)
-        campaignsContainer.innerHTML += this.getHtml()
+        campaignsContainer.innerHTML += this.render()
     }
 
 
