@@ -14,6 +14,8 @@ export default class Campaign extends AbstractView {
         this.name = params.name
         //this.npcs = nps.map()
 
+        //Campaign.all.push(this)
+
     }
 
     async getHtml() {
