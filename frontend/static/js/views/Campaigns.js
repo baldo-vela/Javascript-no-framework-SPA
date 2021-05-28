@@ -12,6 +12,7 @@ export default class Campaign extends AbstractView {
         this.setTitle("Campaigns");
         this.id = params.id
         this.name = params.name
+        //this.npcs = nps.map()
 
     }
 
@@ -23,7 +24,10 @@ export default class Campaign extends AbstractView {
     }
     render(){
         return(
-            `<li id="campaign-${this.id}" data-link=${this.id}>`
+            `<li id="campaign-${this.id}" data-link=${this.id}>
+                <span>${this.name}</span>
+            </li>
+            `
         )
     }
 
