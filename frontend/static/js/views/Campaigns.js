@@ -10,16 +10,20 @@ export default class Campaign extends AbstractView {
         // Need the super constructor to override the parent class
         super(params);
         this.setTitle("Campaigns");
+        this.id = params.id
+
     }
 
     async getHtml() {
         return `
             <h1>Scope out your Campaigns</h1>
+            <ul id="campaigns-container"></ul> 
         `;
     }
 
     addToDom(){
-        const campaignsContainer = document.getElementById("campaign-container");
+        const campaignsContainer = document.getElementById("campaigns-container");
+        console.log(this)
         campaignsContainer.innerHTML += this.getHtml()
     }
 
