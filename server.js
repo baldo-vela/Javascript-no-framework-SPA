@@ -13,4 +13,4 @@ app.get("/*",
 });
 
 // Tells the express application the Port value to use for the server, and pushes the console log message when the event occurs so
-app.listen(process.env.PORT || 3000, () => console.log("Server Running..."));
+app.listen(process.env.PORT || 3500, () => console.log("Server Running..."));
