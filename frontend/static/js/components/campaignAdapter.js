@@ -1,5 +1,6 @@
 //Handles fetching between front and back end
-class campaignAdapter {
+import Campaign from "../views/Campaigns.js";
+export default class campaignAdapter {
     constructor(rootURL){
         this.rootStoreURL = `${rootURL}/api/v1/campaigns`
     }

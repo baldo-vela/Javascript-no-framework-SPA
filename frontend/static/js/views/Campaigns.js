@@ -2,7 +2,7 @@ import AbstractView from "./AbstractView.js";
 //Okay lets define a campaign system
 //Campaign has a Name, and a Descrip
 //A Campaign has many NPC's
-export default class extends AbstractView {
+export default class Campaign extends AbstractView {
     //Static container
     static all = []
 
