@@ -1,9 +1,9 @@
 console.log("Index.JS Loaded!")
 
-import Campaigns from "./views/Campaigns.js";
-import CampaignView from "./views/CampaignView.js";
-import Dashboard from "./views/Dashboard.js";
-import Settings from "./views/Settings.js";
+import Campaigns from "./components/Campaigns.js";
+import CampaignView from "./components/CampaignView.js";
+import Dashboard from "./components/Dashboard.js";
+import Settings from "./components/Settings.js";
 //slight bit of RegEx processing and sanitization on incoming path requests, pushes incoming ID to a capture object [/object/id][id]
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
