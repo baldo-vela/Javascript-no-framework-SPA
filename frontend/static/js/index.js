@@ -2,7 +2,6 @@ console.log("Index.JS Loaded!")
 
 import Campaigns from "./views/Campaigns.js";
 import CampaignView from "./views/CampaignView.js";
-import campaignAdapter from "./components/campaignAdapter.js";
 import Dashboard from "./views/Dashboard.js";
 import Settings from "./views/Settings.js";
 //slight bit of RegEx processing and sanitization on incoming path requests, pushes incoming ID to a capture object [/object/id][id]
@@ -64,6 +63,8 @@ const router = async () => {
 
 window.addEventListener("popstate", router);
 
+const instanceAdapter = new campaignAdapter("http://localhost:3000")
+
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Document Loaded");
 
@@ -76,5 +77,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     router();
-    campaignAdapter.getCampaigns();
+    instanceAdapter.getCampaigns();
 })
