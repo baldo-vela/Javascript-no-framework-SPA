@@ -1,13 +1,11 @@
-import AbstractView from "./AbstractView.js";
-
-export default class extends AbstractView {
-    constructor(params) {
+class Dashboard extends AbstractView {
+    constructor() {
         // Need the super constructor to override the parent class
-        super(params);
+        super();
         this.setTitle("DK:Dashboard");
     }
 
-    async getHtml() {
+    getHtml() {
         return `
         <h1>Dungeon Key</h1>
         <h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>

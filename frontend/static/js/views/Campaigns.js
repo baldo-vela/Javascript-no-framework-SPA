@@ -2,7 +2,7 @@ import AbstractView from "./AbstractView.js";
 //Okay lets define a campaign system
 //Campaign has a Name, and a Descrip
 //A Campaign has many NPC's
-export default class Campaign extends AbstractView {
+class Campaign extends AbstractView {
 
 
     constructor(params) {
@@ -18,7 +18,7 @@ export default class Campaign extends AbstractView {
 
     }
 
-    async getHtml() {
+    getHtml() {
         return `
             <h1>Scope out your Campaigns</h1>
             <ul id="campaigns-container"></ul> 
