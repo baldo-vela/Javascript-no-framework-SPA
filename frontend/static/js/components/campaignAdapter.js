@@ -1,22 +1,22 @@
 //Handles fetching between front and back end
 
 class campaignAdapter {
-    constructor(rootURL){
-        this.rootStoreURL = `${rootURL}/api/v1/campaigns`
+    constructor(baseURL){
+        this.baseCampaignURL = `${baseURL}/api/v1/campaigns`
     }
 
     getCampaigns(){
-        fetch(this.rootStoreURL)
-        .then(res => res.json()
-        .then(campaigns =>{
-            campaigns.forEach(campaign => {
-                const temp = new Campaign(campaign)
-                console.log(temp)
-                // temp.addToDom()
-            })
-        }))
+        fetch(this.baseCampaignURL)
+        .then(resp => resp.json())
+        .then(resp => console.log(resp))
+        // .then(campaigns => {
+        //     campaigns.forEach(campaign => {
+        //         const temp = new Campaign(campaign)
+        //         console.log(temp)
+        //     })
+        // })
     //Error catching goes here
-    .catch(error => console.error(error))
+    //.catch(error => console.error(error))
     }
 
 }
