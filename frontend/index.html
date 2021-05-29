@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script defer src="theme.js"></script> -->
+    
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./static/css/index.css" />
+</head>
+<body>
+    <nav class = "navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="/" class="nav__link" data-link>Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a href="/campaigns" class="nav__link" data-link>Campaigns</a>
+            </li>
+            <li class="nav-item">
+                <a href="/settings" class="nav__link" data-link>Settings</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <!--Enclose the injected content to be inside main for better pattern matching-->
+        <div id="app">
+            <div id="form-container"></div>
+            
+        </div>
+    <!-- Additional loading scripts will go here, see Laura's vids/repo -->
+    <!--Examples: Each script handles different objects
+        <script type="text/javascript" src="src/components/product.js"></script>
+        <script type="text/javascript" src="src/components/store.js"></script>
+        <script type="text/javascript" src="src/components/shoppeAdapter.js"></script>
+        <script type="text/javascript" src="src/components/storeForm.js"></script> -->
+
+    <!--WIP-->
+        
+        <script type="module" src="./static/js/views/Dashboard.js"></script>   
+        <script type="module" src="./static/js/views/Settings.js"></script>
+        <script type="module" src="./static/js/views/CampaignView.js"></script>
+        <script type="module" src="./static/js/views/Campaigns.js"></script>
+        <script type="module" src="./static/js/components/campaignAdapter.js"></script>
+        <script type="module" src="./static/js/index.js"></script>
+    </main>
+</body>
+</html>
