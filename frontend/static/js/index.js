@@ -30,9 +30,9 @@ const router = async () => {
         // Root
         { path: "/",            view: Dashboard },
         // Ideally View all Campaigns
-        { path: "/campaigns",       view: Campaigns     },
+        { path: "/campaigns",   view: Campaigns     },
         //OH snap we need a specific campaign view route
-        { path: "/campaignss/:id",  view: CampaignView  },
+        { path: "/campaigns/:id",view: CampaignView  },
         // Settings
         { path: "/settings",    view: Settings  },
 
