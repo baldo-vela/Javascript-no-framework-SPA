@@ -16,7 +16,7 @@ class campaignAdapter {
             })
         }))
     //Error catching goes here
-    //.catch(error => console.error(error))
+    .catch(error => console.error(error))
     }
 
 }

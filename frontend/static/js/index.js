@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    //instanceAdapter.getCampaigns();
+    instanceAdapter.getCampaigns();
 })
 
 //Read - Fetch Campaigns
