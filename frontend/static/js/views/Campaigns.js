@@ -3,8 +3,7 @@ import AbstractView from "./AbstractView.js";
 //Campaign has a Name, and a Descrip
 //A Campaign has many NPC's
 export default class Campaign extends AbstractView {
-    //Static container
-    static all = []
+
 
     constructor(params) {
         // Need the super constructor to override the parent class

@@ -1,4 +1,6 @@
 export default class {
+    //Static container
+    static all = []
     constructor (params) {
         this.params = params;
 
