@@ -5,14 +5,12 @@
 class Campaign extends AbstractView {
 
 
-    constructor(params) {
-        // Need the super constructor to override the parent class
-        super(params);
-        this.setTitle("Campaigns");
-        this.id = params.id
-        this.name = params.name
-        this.description = params.description
-        //this.npcs = nps.map()
+    constructor({id, name, description }) {
+        this.id = id
+        this.name = name
+        this.description = description
+        this.setTitle(`${name}`)
+        
 
         Campaign.all.push(this)
 

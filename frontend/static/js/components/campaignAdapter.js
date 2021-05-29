@@ -9,14 +9,14 @@ class campaignAdapter {
         fetch(this.baseCampaignURL)
         .then(resp => resp.json())
         .then(resp => console.log(resp))
-        // .then(campaigns => {
-        //     campaigns.forEach(campaign => {
-        //         const temp = new Campaign(campaign)
-        //         console.log(temp)
-        //     })
-        // })
+        .then(campaigns => {
+            campaigns.forEach(campaign => {
+                const temp = new Campaign(campaign)
+                console.log(temp)
+            })
+        })
     //Error catching goes here
-    //.catch(error => console.error(error))
+    .catch(error => console.error(error))
     }
 
 }
