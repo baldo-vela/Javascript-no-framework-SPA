@@ -11,7 +11,8 @@ class campaignAdapter {
         .then(campaigns =>{
             campaigns.forEach(campaign => {
                 const temp = new Campaign(campaign)
-                temp.addToDom()
+                console.log(temp)
+                // temp.addToDom()
             })
         }))
     //Error catching goes here

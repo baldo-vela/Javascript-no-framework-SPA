@@ -1,9 +1,10 @@
 console.log("Index.JS Loaded!")
 
+const BASE_URL = "http://localhost:3000"
 
 //import campaignAdapter from "./components/campaignAdapter.js";
 
-//const instanceAdapter = new campaignAdapter("http://localhost:3000")
+const instanceAdapter = new campaignAdapter(BASE_URL)
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Document Loaded");
@@ -18,3 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //instanceAdapter.getCampaigns();
 })
+
+//Read - Fetch Campaigns
