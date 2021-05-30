@@ -22,7 +22,7 @@ class Campaign extends AbstractView{
             <ul id="campaigns-container"></ul> 
         `;
     }
-    render(){
+    renderCampaign(){
         return(
             `<li id="campaign-${this.id}" data-id=${this.id}>
                 <span><strong>${this.name}</strong></span>
