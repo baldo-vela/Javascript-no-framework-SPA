@@ -8,7 +8,6 @@ class campaignAdapter {
     getCampaigns(){
         fetch(this.baseCampaignURL)
         .then(res => res.json())
-        //.then(res => console.log("json object:", res))
         .then(campaigns => {
            campaigns.forEach(campaign =>{
                 console.log("Rails object:", campaign)
@@ -17,7 +16,7 @@ class campaignAdapter {
                 c.addToDom();
             })
         })
-        //Error catching goes here
+        //Error catching
         .catch(error => console.error(error))
     }
 
