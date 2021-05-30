@@ -27,11 +27,14 @@ class campaignAdapter {
 
     //Create New Campaign
     createCampaign(){
-        Create a form
+        //take params from form, user params to 
+        //run a fetch with post method
 
     }
     //Update existing
     editCampaign(){
+        //take a Boolean and some params
+        //Run a fetch with patch method
 
     }
 
