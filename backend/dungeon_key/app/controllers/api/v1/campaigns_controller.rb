@@ -5,7 +5,10 @@ class Api::V1::CampaignsController < ApplicationController
   def index
     @campaigns = Campaign.all
 
-    render json: @campaigns
+    render json: @campaigns, include: {
+      npcs: {}
+    }
+
   end
 
   # GET /campaigns/1

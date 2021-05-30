@@ -18,3 +18,6 @@ backup_campaign.npcs.build(
     name: "Steve the Pirate",
     notes: "'Yarr, I be the dread pirate Steve!'"
 )
+
+test_campaign.save
+backup_campaign.save
