@@ -8,5 +8,11 @@ class Npc {
 
         Npc.all.push(this)
     }
-    
+
+    renderNpc(){
+        return `
+            <strong>Test</strong>
+        `
+    }
+
 }
