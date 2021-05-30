@@ -9,8 +9,9 @@ class Campaign {
         this.id = params.id
         this.name = params.name
         this.description = params.description
+        console.log("npcs", params.npcs)
+        this.npcs = params.npcs.map(n => new Npc(n))
         //this.setTitle(`${name}`)
-        
 
         Campaign.all.push(this)
 
