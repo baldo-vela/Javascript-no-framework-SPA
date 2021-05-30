@@ -39,5 +39,13 @@ class Campaign {
         campaignsContainer.innerHTML += this.renderCampaign();
     }
 
+    renderNpcs(){
+        const li = document.getElementById(`campaign-${this.id}`)
+        const ul = document.createElement('ul')
+
+        this.npcs.forEach(n => ul.innerHTML += n.render())
+        li.append(ul)
+    }
+
 
 }
