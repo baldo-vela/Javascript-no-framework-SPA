@@ -4,7 +4,7 @@ class campaignAdapter {
     constructor(baseURL){
         this.baseCampaignURL = `${baseURL}/api/v1/campaigns`
     }
-
+    //Read the index of Campaigns and itterate the NPC's
     getCampaigns(){
         fetch(this.baseCampaignURL)
         .then(res => res.json())
@@ -18,6 +18,21 @@ class campaignAdapter {
         })
         //Error catching
         .catch(error => console.error(error))
+    }
+
+    //Detail View of a campaign and it's associated NPC's
+    viewCampaign(){
+
+    }
+
+    //Create New Campaign
+    createCampaign(){
+        Create a form
+
+    }
+    //Update existing
+    editCampaign(){
+
     }
 
 }
