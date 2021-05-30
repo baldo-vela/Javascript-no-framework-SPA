@@ -4,6 +4,7 @@
 //A Campaign has many NPC's
 class Campaign extends AbstractView{
     constructor({id, name, description }) {
+        //We have to call this method to override the parent class constructor
         super({id, name, description })
         this.id = id
         this.name = name
