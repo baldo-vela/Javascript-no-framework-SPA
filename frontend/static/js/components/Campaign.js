@@ -1,14 +1,14 @@
-//import AbstractView from "./AbstractView.js";
-//Okay lets define a campaign system
 //Campaign has a Name, and a Descrip
 //A Campaign has many NPC's
-class Campaign extends AbstractView{
-    constructor({id, name, description }) {
+class Campaign {
+    static all = []
+
+    constructor(params) {
         //We have to call this method to override the parent class constructor
-        super({id, name, description })
-        this.id = id
-        this.name = name
-        this.description = description
+        
+        this.id = params.id
+        this.name = params.name
+        this.description = params.description
         //this.setTitle(`${name}`)
         
 
@@ -35,7 +35,7 @@ class Campaign extends AbstractView{
     addToDom(){
         const campaignsContainer = document.getElementById("campaigns-container");
         console.log(this)
-        campaignsContainer.innerHTML += this.render()
+        campaignsContainer.innerHTML += this.renderCampaign();
     }
 
 

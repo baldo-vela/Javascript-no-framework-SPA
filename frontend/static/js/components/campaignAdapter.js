@@ -12,8 +12,9 @@ class campaignAdapter {
         .then(campaigns => {
            campaigns.forEach(campaign =>{
                 console.log("Rails object:", campaign)
-                let c = new Campaign(campaign.id, campaign.name, campaign.description)
+                let c = new Campaign(campaign)
                 console.log("JS object:", c)
+                c.addToDom();
             })
         })
         //Error catching goes here
