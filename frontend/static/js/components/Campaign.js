@@ -2,14 +2,13 @@
 //Okay lets define a campaign system
 //Campaign has a Name, and a Descrip
 //A Campaign has many NPC's
-class Campaign extends AbstractView {
-
-
+class Campaign extends AbstractView{
     constructor({id, name, description }) {
+        super({id, name, description })
         this.id = id
         this.name = name
         this.description = description
-        this.setTitle(`${name}`)
+        //this.setTitle(`${name}`)
         
 
         Campaign.all.push(this)
