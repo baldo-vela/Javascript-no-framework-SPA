@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     //Read - Fetch Campaigns
     instanceAdapter.getCampaigns();
+    //Pull in the form for a new campaign
     addCreateForm();
 })
 
@@ -27,6 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
 function addCreateForm(){
     const formContainer = document.getElementById("form-container");
     const form = document.createElement('form');
-    form.innerHTML = `<input placeholder='Name Your New Campaign' type='text'/><input type='Submit'/>`
+    form.innerHTML = 
+        `
+            <label for="newCampaignName">Name Your New Campaign:</label><br>    
+            <input placeholder='New Campaign' type='text' required='true'/><br>
+            <label for="newCampaignDescription">Describe your New Campaign:</label><br>
+            <textarea rows='10rem' cols='50rem' name='newCampaignDescription'>Once upon a time...</textarea><br>
+            <input type='Submit'/>
+        `
     formContainer.append(form)
 }
