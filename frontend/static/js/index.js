@@ -16,8 +16,17 @@ document.addEventListener("DOMContentLoaded", () => {
             navigateTo(e.target.href);
         }
     });
-
+    //Read - Fetch Campaigns
     instanceAdapter.getCampaigns();
+    addCreateForm();
 })
 
-//Read - Fetch Campaigns
+
+
+//Create New Campaigns with a form
+function addCreateForm(){
+    const formContainer = document.getElementById("form-container");
+    const form = document.createElement('form');
+    form.innerHTML = `<input placeholder='Name Your New Campaign' type='text'/><input type='Submit'/>`
+    formContainer.append(form)
+}

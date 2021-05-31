@@ -17,10 +17,9 @@ class Campaign {
 
     }
 
-    getHtml() {
+    getCampaignHeader() {
         return `
-            <h1>Scope out your Campaigns</h1>
-            <ul id="campaigns-container"></ul> 
+            <h1>Scope out your Campaigns</h1> 
         `;
     }
     renderCampaign(){
