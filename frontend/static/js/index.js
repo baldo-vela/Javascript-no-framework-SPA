@@ -31,10 +31,18 @@ function addCreateForm(){
     form.innerHTML = 
         `
             <label for="newCampaignName">Name Your New Campaign:</label><br>    
-            <input placeholder='New Campaign' type='text' required='true'/><br>
+            <input placeholder='New Campaign' type='text' required='true' id='newCampaignName' maxlength = '40'/><br>
             <label for="newCampaignDescription">Describe your New Campaign:</label><br>
-            <textarea rows='10rem' cols='50rem' name='newCampaignDescription'>Once upon a time...</textarea><br>
+            <textarea type='input' rows='10rem' cols='50rem' name='newCampaignDescription'id='newCampaignDescription' maxlength='500' wrap='true'>Once upon a time...</textarea><br>
             <input type='Submit'/>
         `
     formContainer.append(form)
+
+    form.addEventListener("submit", handleSubmit)
+}
+
+function handleSubmit(e){
+    e.preventDefault()
+    console.log(e.target)
+    //const nameInput = e.target.children[0]
 }
