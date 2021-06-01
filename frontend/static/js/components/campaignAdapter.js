@@ -26,9 +26,22 @@ class campaignAdapter {
     }
 
     //Create New Campaign
-    createCampaign(){
+    createCampaign(params){
         //take params from form, user params to 
         //run a fetch with post method
+        fetch(this.baseCampaignURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(params)
+        })
+        .then(resp => resp.json())
+        .then(params =>{
+            let c = new Campaign(params)
+            c.renderCampaign();
+        })
 
     }
     //Update existing

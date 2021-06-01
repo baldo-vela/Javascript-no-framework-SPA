@@ -34,15 +34,23 @@ function addCreateForm(){
             <input placeholder='New Campaign' type='text' required='true' id='newCampaignName' maxlength = '40'/><br>
             <label for="newCampaignDescription">Describe your New Campaign:</label><br>
             <textarea type='input' rows='10rem' cols='50rem' name='newCampaignDescription'id='newCampaignDescription' maxlength='500' wrap='true'>Once upon a time...</textarea><br>
-            <input type='Submit'/>
+            <input id="new-campaign-submit" value='Create Campaign' type='Submit'/>
         `
     formContainer.append(form)
 
-    form.addEventListener("submit", handleSubmit)
+    form.addEventListener("submit", handleCampaignSubmit)
 }
 
-function handleSubmit(e){
+function handleCampaignSubmit(e){
     e.preventDefault()
-    console.log(e.target)
-    //const nameInput = e.target.children[0]
+    let newName = document.getElementById("newCampaignName").value
+    let newCampaignDescription = document.getElementById("newCampaignDescription").value
+
+    let params = {
+        name: newName,
+        description: newCampaignDescription
+    }
+
+    console.log(params)
+    instanceAdapter.createCampaign(params)
 }
