@@ -13,7 +13,9 @@ class Api::V1::CampaignsController < ApplicationController
 
   # GET /campaigns/1
   def show
-    render json: @campaign
+    render json: @campaign, include: {
+      npcs: {} 
+    }
   end
 
   # POST /campaigns
@@ -21,9 +23,15 @@ class Api::V1::CampaignsController < ApplicationController
     @campaign = Campaign.new(campaign_params)
 
     if @campaign.save
-      render json: @campaign, status: :created, location: @campaign
+      render json: {
+        status: 201,
+        store: @campaign
+      }, status: :created, location: api_v1_campaign_path(@campaign)
     else
-      render json: @campaign.errors, status: :unprocessable_entity
+      render json: {
+        status: 422,
+        errors: @store.errors.full_messages.join(", ")
+      }, status: :unprocessable_entity
     end
   end
 
