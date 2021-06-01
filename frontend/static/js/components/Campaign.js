@@ -9,6 +9,11 @@ class Campaign {
         this.id = params.id
         this.name = params.name
         this.description = params.description
+        //By default, the Front end will not be passing in any npc's in the params json, only the Rails seeding file does this
+        //TO DO: Add conditional logic to handle this
+            //     Uncaught (in promise) TypeError: Cannot read property 'map' of undefined
+            //      at new Campaign (Campaign.js:13)
+            //      at campaignAdapter.js:42
         console.log("npcs", params.npcs)
         this.npcs = params.npcs.map(n => new Npc(n))
         //this.setTitle(`${name}`)
