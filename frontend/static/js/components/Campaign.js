@@ -34,6 +34,8 @@ class Campaign {
                 <p><span>${this.description}</span><br>
             
                 <button class="delete-campaign-bttn" data-id=${this.id}>Delete</button>
+                <button class="edit-campaign-bttn" data-id=${this.id}>Edit</button>
+                
                 </p>
             </li>
             `
