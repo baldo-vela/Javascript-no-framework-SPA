@@ -31,7 +31,10 @@ class Campaign {
         return(
             `<li id="campaign-${this.id}" data-id=${this.id}>
                 <span><strong>${this.name}</strong></span>
-                <p><span>${this.description}</span></p>
+                <p><span>${this.description}</span><br>
+            
+                <button class="delete-campaign-bttn" data-id=${this.id}>Delete</button>
+                </p>
             </li>
             `
         )
