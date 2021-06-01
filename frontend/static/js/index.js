@@ -54,3 +54,17 @@ function handleCampaignSubmit(e){
     console.log(params)
     instanceAdapter.createCampaign(params)
 }
+
+function handleCampaignDelete(e){
+    //Intercept the delete button event 
+    //Pass a Fetch to the campaignAdapter #delete method
+    //
+    e.preventDefault()
+
+}
+
+function handleCampaignView(e){
+    //Expand the selected campaign and perform full CRUD for NPC's
+    e.preventDefault()
+
+}

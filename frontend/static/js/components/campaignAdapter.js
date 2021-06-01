@@ -51,4 +51,10 @@ class campaignAdapter {
 
     }
 
+    //Delete Campaign
+    deleteCampaign(params){
+        //fetch(`${this.baseCampaignURL}/${params.id}/`)
+
+    }
+
 }
