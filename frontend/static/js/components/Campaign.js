@@ -29,7 +29,7 @@ class Campaign {
     }
     renderCampaign(){
         return(
-            `<li id="campaign-${this.id}" data-id=${this.id}>
+            `<card id="campaign-${this.id}" data-id=${this.id}>
                 <span><strong>${this.name}</strong></span>
                 <p><span>${this.description}</span><br>
             
@@ -37,7 +37,7 @@ class Campaign {
                 <button class="edit-campaign-bttn" data-id=${this.id}>Edit</button>
                 
                 </p>
-            </li>
+            </card>
             `
         )
     }
