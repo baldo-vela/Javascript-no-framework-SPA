@@ -30,7 +30,7 @@ class Campaign {
     renderCampaign(){
         return(
             `<card id="campaign-${this.id}" data-id=${this.id}>
-                <span><strong>${this.name}</strong></span>
+                <span><h3>${this.name}</h3></span>
                 <p><span>${this.description}</span><br>
             
                 <button class="delete-campaign-bttn" data-id=${this.id}>Delete</button>

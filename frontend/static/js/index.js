@@ -29,7 +29,7 @@ function addCreateForm(){
     const formContainer = document.getElementById("form-container");
     const form = document.createElement('form');
     form.innerHTML = 
-        `
+        `   <h2>Create a New Campaign</h2>
             <label for="newCampaignName">Name Your New Campaign:</label><br>    
             <input placeholder='New Campaign' type='text' required='true' id='newCampaignName' maxlength = '40'/><br>
             <label for="newCampaignDescription">Describe your New Campaign:</label><br>
