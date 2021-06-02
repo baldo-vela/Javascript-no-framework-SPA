@@ -32,6 +32,7 @@ class Campaign {
             `<card id="campaign-${this.id}" data-id=${this.id}>
                 <span><h3>${this.name}</h3></span>
                 <p><span>${this.description}</span><br>
+                <button class="view-campaign-bttn" data-id=${this.id}>View Campaign</button>
             
                 <button class="delete-campaign-bttn" data-id=${this.id}>Delete</button>
                 <button class="edit-campaign-bttn" data-id=${this.id}>Edit</button>

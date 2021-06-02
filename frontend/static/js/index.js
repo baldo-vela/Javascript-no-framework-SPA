@@ -54,7 +54,9 @@ function handleCampaignSubmit(e){
     console.log(params)
     instanceAdapter.createCampaign(params)
 }
-
+function listenEditDelete(){
+    
+}
 function handleCampaignDelete(e){
     //Intercept the delete button event 
     //Pass a Fetch to the campaignAdapter #delete method

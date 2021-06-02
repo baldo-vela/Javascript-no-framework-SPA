@@ -51,7 +51,7 @@ class Api::V1::CampaignsController < ApplicationController
       render json: {message: "Successfully deleted", campaign: @campaign}
     else
       render json: {message: "Failed to delete"}
-    end}
+    end
   end
 
   private
