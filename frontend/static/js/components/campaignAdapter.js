@@ -52,9 +52,10 @@ class campaignAdapter {
     }
 
     //Delete Campaign
-    deleteCampaign(params){
-        console.log(params)
-        fetch(`${this.baseCampaignURL}/${params.id}/`,{
+    deleteCampaign(card){
+        console.log("Deleting Campaign Given:", card)
+        debugger
+        fetch(`${this.baseCampaignURL}/${card.dataset.id}/`,{
             method: 'DELETE'
         })
         .then(resp => {
@@ -66,10 +67,11 @@ class campaignAdapter {
                 //Delete the entry from the Dom
                 //Find the element in the front end, and then .remove it
                 //.find( (c) => c.id==2) 
-                const c = Campaign.all.find(c => c.id == params.id)
-                console.log(c)
-                c.remove()
-                console.log("Deletion Succeded:")
+                //const removeMe = Campaign.all.find( c => c.id == params.id)
+                
+                card.remove();
+                console.log("Deletion Succeded!")
+                
             } else {
                 console.log('Deletion Error:',data.message)
                 alert(data.message)

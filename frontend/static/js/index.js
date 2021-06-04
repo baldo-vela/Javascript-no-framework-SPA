@@ -64,36 +64,35 @@ function listenInteraction(){
 function handleInteraction(e){
     //Interaction with the campaign container feeds into a switch that reads the 'data-action' css tag of an object
     e.preventDefault()
-    console.log("Target:", e.target)
     const card = e.target.parentElement.parentElement
     const action = e.target.dataset.action
     console.log("Action:", action)
     switch (action) {
         case "delete":
-            console.log("Deleting", card)
-            handleCampaignDelete(e)
+            console.log("Deleting ID:", card.dataset.id)
+            handleCampaignDelete(card)
             break;
         case "view":
             
-            console.log("Viewing", card)
+            console.log("Viewing", card.dataset.id)
 
             break;
         case "edit":
-            console.log("Editing", card)
+            console.log("Editing", card.dataset.id)
             break;
         default:
             break;
     }
 
 }
-function handleCampaignDelete(e){
+function handleCampaignDelete(card){
     //Intercept the delete button event 
     //Ideally throws a confirm window
     //Pass a Fetch to the campaignAdapter #delete method
-    console.log("Delete Event:", e)
+    console.log("Propmting to Delete Card:", card)
     if (confirm('Are you Sure you wish to delete this campaign?')){
         console.log("User Confirmed Deletion.")
-        instanceAdapter.deleteCampaign(e.target.dataset)
+        instanceAdapter.deleteCampaign(card)
         //this.location.reload()
     } else {
         console.log("User Declined Deletion.")
