@@ -62,7 +62,7 @@ function listenInteraction(){
     campaignsContainer.addEventListener("click", this.handleInteraction)
 }
 function handleInteraction(e){
-    //Interaction with the campaign container feeds into a switch that reads the 'data-action' css tag of an object
+    //Interaction with the campaign container feeds into this routing function that reads the 'data-action' css tag of an object
     e.preventDefault()
     const card = e.target.parentElement.parentElement
     const action = e.target.dataset.action
