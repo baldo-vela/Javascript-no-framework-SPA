@@ -66,7 +66,10 @@ class campaignAdapter {
                 //Delete the entry from the Dom
                 //Find the element in the front end, and then .remove it
                 //.find( (c) => c.id==2) 
-                console.log("Deletion Parent:")
+                const c = Campaign.all.find(c => c.id == params.id)
+                console.log(c)
+                c.remove()
+                console.log("Deletion Succeded:")
             } else {
                 console.log('Deletion Error:',data.message)
                 alert(data.message)

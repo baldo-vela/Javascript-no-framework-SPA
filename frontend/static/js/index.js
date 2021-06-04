@@ -64,14 +64,23 @@ function listenInteraction(){
 function handleInteraction(e){
     //Interaction with the campaign container feeds into a switch that reads the 'data-action' css tag of an object
     e.preventDefault()
-    const card = e.target.parentElement
+    console.log("Target:", e.target)
+    const card = e.target.parentElement.parentElement
     const action = e.target.dataset.action
     console.log("Action:", action)
     switch (action) {
         case "delete":
+            console.log("Deleting", card)
             handleCampaignDelete(e)
             break;
-        
+        case "view":
+            
+            console.log("Viewing", card)
+
+            break;
+        case "edit":
+            console.log("Editing", card)
+            break;
         default:
             break;
     }
