@@ -53,6 +53,7 @@ class campaignAdapter {
 
     //Delete Campaign
     deleteCampaign(params){
+        console.log(params)
         fetch(`${this.baseCampaignURL}/${params.id}/`,{
             method: 'DELETE'
         })
@@ -63,12 +64,16 @@ class campaignAdapter {
         .then(data => {
             if (data.message === "Successfully Deleted"){
                 //Delete the entry from the Dom
+                //Find the element in the front end, and then .remove it
+                //.find( (c) => c.id==2) 
+                console.log("Deletion Parent:")
             } else {
+                console.log('Deletion Error:',data.message)
                 alert(data.message)
             }
         })
         .catch(err => console.error(err))
-        //this.location.reload()
+        
     }
 
 }

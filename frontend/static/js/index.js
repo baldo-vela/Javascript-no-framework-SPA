@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     instanceAdapter.getCampaigns();
     //Pull in the form for a new campaign
     addCreateForm();
+    listenInteraction();
 })
 
 
@@ -54,19 +55,49 @@ function handleCampaignSubmit(e){
     console.log(params)
     instanceAdapter.createCampaign(params)
 }
-function listenEditDelete(){
-    
+
+//Listen for User interaction with App injected content
+function listenInteraction(){
+    const campaignsContainer = document.getElementById("campaigns-container");
+    campaignsContainer.addEventListener("click", this.handleInteraction)
+}
+function handleInteraction(e){
+    //Interaction with the campaign container feeds into a switch that reads the 'data-action' css tag of an object
+    e.preventDefault()
+    const card = e.target.parentElement
+    const action = e.target.dataset.action
+    console.log("Action:", action)
+    switch (action) {
+        case "delete":
+            handleCampaignDelete(e)
+            break;
+        
+        default:
+            break;
+    }
+
 }
 function handleCampaignDelete(e){
     //Intercept the delete button event 
+    //Ideally throws a confirm window
     //Pass a Fetch to the campaignAdapter #delete method
-    //
-    e.preventDefault()
+    console.log("Delete Event:", e)
+    if (confirm('Are you Sure you wish to delete this campaign?')){
+        console.log("User Confirmed Deletion.")
+        instanceAdapter.deleteCampaign(e.target.dataset)
+        //this.location.reload()
+    } else {
+        console.log("User Declined Deletion.")
+    } 
+    
 
 }
-
+//Expand View on a Campaign
 function handleCampaignView(e){
     //Expand the selected campaign and perform full CRUD for NPC's
+    //Collapse all other campaigns
+    //Show CRUD buttons for NPC's
+    //
     e.preventDefault()
 
 }

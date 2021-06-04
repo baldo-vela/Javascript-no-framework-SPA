@@ -48,7 +48,7 @@ class Api::V1::CampaignsController < ApplicationController
   def destroy
     # Attempts to delete as part of the boolean, kicks back a message to the front end
     if @campaign.destroy
-      render json: {message: "Successfully deleted", campaign: @campaign}
+      render json: {message: "Successfully Deleted", campaign: @campaign}
     else
       render json: {message: "Failed to delete"}
     end
