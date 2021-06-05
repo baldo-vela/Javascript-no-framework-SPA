@@ -38,10 +38,18 @@ class campaignAdapter {
             body: JSON.stringify(params)
         })
         .then(resp => resp.json())
-        .then(params =>{
-            let c = new Campaign(params)
-            c.addToDom();
+        .then(data =>{
+            console.log("API Create response:", data)
+            if (data.status === 201){
+                let c = new Campaign(data.store)
+                c.addToDom();       
+            } else {
+                console.log("Presenting User with Error from API resp.")
+                alert(data.errors)
+            }
+            
         })
+        .catch(err => console.error("API resp. an error:", err))
 
     }
     //Update existing

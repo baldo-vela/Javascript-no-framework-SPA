@@ -4,8 +4,7 @@ class Campaign {
     static all = []
 
     constructor(params) {
-        //We have to call this method to override the parent class constructor
-        
+        console.log("New Campaign Params:", params)
         this.id = params.id
         this.name = params.name
         this.description = params.description
@@ -15,7 +14,7 @@ class Campaign {
             //      at new Campaign (Campaign.js:13)
             //      at campaignAdapter.js:42
         console.log("npcs", params.npcs)
-        debugger
+        //debugger
         //NGL there is probably a better way to build this protection
         if (params.npcs === undefined || params.npcs === null){
             this.npcs = []
