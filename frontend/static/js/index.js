@@ -104,8 +104,7 @@ function handleCampaignDelete(card){
 function handleCampaignView(e){
     //Expand the selected campaign and perform full CRUD for NPC's
     //Collapse all other campaigns
-    //Show CRUD buttons for NPC's
-    //
+    //STRETCH goal: Show CRUD buttons for NPC's
     e.preventDefault()
 
 }
