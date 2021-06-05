@@ -36,6 +36,10 @@ nrfaw.npcs.build(
     name: "Patience", 
     notes: "Not Skynet, just a very overworked and worried NHP. The govenor of Evergreen Colony"
 )
+nrfaw.npcs.build(
+    name: "Conviniently Placed Chair",
+    notes: "Always ready to help convince someone of something."
+)
 
 greyhawk.npcs.build(
     name: "Iggwilv",
