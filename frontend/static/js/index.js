@@ -52,7 +52,7 @@ function handleCampaignSubmit(e){
         description: newCampaignDescription
     }
 
-    console.log(params)
+    console.log("Passing this to creation:", params)
     instanceAdapter.createCampaign(params)
 }
 
