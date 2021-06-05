@@ -40,7 +40,7 @@ class campaignAdapter {
         .then(resp => resp.json())
         .then(params =>{
             let c = new Campaign(params)
-            c.renderCampaign();
+            c.addToDom();
         })
 
     }
@@ -54,7 +54,7 @@ class campaignAdapter {
     //Delete Campaign
     deleteCampaign(card){
         console.log("Deleting Campaign Given:", card)
-        debugger
+        
         fetch(`${this.baseCampaignURL}/${card.dataset.id}/`,{
             method: 'DELETE'
         })

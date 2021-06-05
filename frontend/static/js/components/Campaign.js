@@ -15,10 +15,15 @@ class Campaign {
             //      at new Campaign (Campaign.js:13)
             //      at campaignAdapter.js:42
         console.log("npcs", params.npcs)
-        this.npcs = params.npcs.map(n => new Npc(n))
-        //this.setTitle(`${name}`)
-
-        Campaign.all.push(this)
+        debugger
+        //NGL there is probably a better way to build this protection
+        if (params.npcs === undefined || params.npcs === null){
+            this.npcs = []
+            Campaign.all.push(this)
+        } else {
+            this.npcs = params.npcs.map(n => new Npc(n))
+            Campaign.all.push(this)
+        }
 
     }
 
