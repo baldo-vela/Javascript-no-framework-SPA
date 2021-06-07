@@ -73,15 +73,17 @@ function handleInteraction(e){
             handleCampaignDelete(card)
             break;
         case "view":
-            
             console.log("Viewing", card.dataset.id)
 
             break;
         case "edit":
+            //WIP
             console.log("Editing", card.dataset.id)
             // editmode -> card
+            //editMode = card
             // button change to update campaign
-            // populate input wit h name of campaign
+            //document.getElementById('').value = "Update Campaign"
+            // populate input fields appropriately with name of campaign, and description
             // submit edit button, update campaign with #handleEditCampaign
             break;
         default:

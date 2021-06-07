@@ -32,6 +32,7 @@ class Campaign {
         `;
     }
     renderCampaign(){
+        //<button class="edit-campaign-bttn" data-action='edit' data-id=${this.id}>Edit</button>
         return(
             `<card id="campaign-${this.id}" data-id=${this.id}>
                 <span><h3>${this.name}</h3></span>
@@ -39,7 +40,7 @@ class Campaign {
                 <button class="view-campaign-bttn" data-action='view' data-id=${this.id}>View Campaign</button>
             
                 <button class="delete-campaign-bttn" data-action='delete' data-id=${this.id}>Delete</button>
-                <button class="edit-campaign-bttn" data-action='edit' data-id=${this.id}>Edit</button>
+                
                 
                 </p>
             </card>
