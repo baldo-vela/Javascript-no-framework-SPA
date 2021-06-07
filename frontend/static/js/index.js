@@ -1,8 +1,8 @@
 console.log("Index.JS Loaded!")
+let editMode = false
+let currentCampaign = false
 
 const BASE_URL = "http://localhost:3000"
-
-//import campaignAdapter from "./components/campaignAdapter.js";
 
 const instanceAdapter = new campaignAdapter(BASE_URL)
 
@@ -79,6 +79,10 @@ function handleInteraction(e){
             break;
         case "edit":
             console.log("Editing", card.dataset.id)
+            // editmode -> card
+            // button change to update campaign
+            // populate input wit h name of campaign
+            // submit edit button, update campaign with #handleEditCampaign
             break;
         default:
             break;
@@ -106,5 +110,10 @@ function handleCampaignView(e){
     //Collapse all other campaigns
     //STRETCH goal: Show CRUD buttons for NPC's
     e.preventDefault()
+
+}
+
+//Campaign Edit
+function handleEditCampaign(card) {
 
 }
