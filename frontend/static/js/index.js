@@ -73,7 +73,10 @@ function handleInteraction(e){
             handleCampaignDelete(card)
             break;
         case "view":
+            if (currentCampaign) currentCampaign.remove()
             console.log("Viewing", card.dataset.id)
+            const c = Campaign.all.find(c => c.id == card.dataset.id)
+            c.renderNpcs()
 
             break;
         case "edit":

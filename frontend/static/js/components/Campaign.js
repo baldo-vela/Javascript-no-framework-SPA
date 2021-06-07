@@ -58,8 +58,9 @@ class Campaign {
         const li = document.getElementById(`campaign-${this.id}`)
         const ul = document.createElement('ul')
 
-        this.npcs.forEach(n => ul.innerHTML += n.render())
+        this.npcs.forEach(n => ul.innerHTML += n.renderNpc())
         li.append(ul)
+        currentCampaign = ul
     }
 
 
