@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //Pull in the form for a new campaign
     addCreateForm();
     listenInteraction();
+    listenSearch();
 })
 
 
@@ -121,4 +122,29 @@ function handleCampaignView(e){
 //Campaign Edit
 function handleEditCampaign(card) {
 
+}
+
+//Campaign Searching
+function listenSearch(){
+    const searchContainer = document.getElementById('searchBar')
+    console.log('Listening for SearchContainer', searchContainer)
+    searchContainer.addEventListener('submit', handleCampaignSearch)
+
+}
+
+function handleCampaignSearch(e){
+    e.preventDefault()
+    console.log('Firing Search', e)
+    let searchContents = document.getElementById('searchContents').value.toLowerCase();
+    console.log('Search Contents:', searchContents)
+    let x = document.getElementsByClassName('campaign')
+
+    for (i = 0; i < x.length; i++){
+        if (!x[i].innerHTML.toLowerCase().includes(searchContents)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
 }

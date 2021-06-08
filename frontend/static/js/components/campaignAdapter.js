@@ -19,6 +19,23 @@ class campaignAdapter {
         //Error catching
         .catch(error => console.error(error))
     }
+    //Search Bar, locally cross-references Campaign Descriptions, and modifies the dom to display campaigns that contain that word
+    searchCampaignsDescriptions(params)
+    {
+        
+        //inject the bar's html into the dom
+        //handle user interaction, probably seperate function
+        //search through each campaign object locally
+        //modify the dom, to output the list of search returned campaigns
+        /*
+            <div class="search-container">
+                <form action="">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><></i></button>
+                </form>
+            </div> 
+        */
+    }   
 
     //Detail View of a campaign and it's associated NPC's
     viewCampaign(){

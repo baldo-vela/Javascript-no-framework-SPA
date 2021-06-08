@@ -126,6 +126,27 @@
   .navbar:hover .logo svg {
     transform: rotate(-180deg);
   }
+
+  /* Search Bar Functionality */
+  #searchbar{
+    margin-left: 15%;
+    padding:15px;
+    border-radius: 10px;
+    background: lightgrey;
+  }
+
+  input[type=text] {
+     width: 30%;
+     -webkit-transition: width 0.15s ease-in-out;
+     transition: width 0.15s ease-in-out;
+  }
+
+  /* When the input field gets focus,
+       change its width to 100% */
+  input[type=text]:focus {
+    width: 40%;
+    background: white;
+  }
   
   /* Small screens */
   @media only screen and (max-width: 600px) {
